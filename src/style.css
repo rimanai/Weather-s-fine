@@ -1,7 +1,35 @@
-h1 {
-  color: green;
+body {
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.wrap {
-  border: 2px;
+p,
+li,
+h1 {
+  color: #02412c;
+}
+
+div.wrap {
+  border: 5px solid;
+  border-color: black;
+  background-color: #f4cee3;
+}
+
+.form {
+  background-color: #f4cee3;
+}
+
+input.form-control {
+  width: 440px !important;
+}
+
+div.container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#bar {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
