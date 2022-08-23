@@ -11,12 +11,18 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="app">
-        <nav class="navbar navbar-expand-lg bg-light" id="bar">
+        <nav class="navbar navbar-expand-lg" id="bar">
           <div class="container-fluid">
             <button
               class="navbar-toggler"
@@ -29,22 +35,14 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">Navbar</a>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled">Disabled</a>
-                </li>
-              </ul>
-              <form class="d-flex" role="search">
+            <a class="navbar-brand bar-text" href="#"
+              >Weather's Fine 🥵 🌈 ⛅️ ☔️ ⛈
+            </a>
+            <div
+              class="collapse navbar-collapse d-flex align-items-end flex-column"
+              id="navbarTogglerDemo03"
+            >
+              <form class="d-flex ml-auto p-2" role="search" id="form">
                 <input
                   class="form-control me-2"
                   type="search"
@@ -59,7 +57,8 @@
           </div>
         </nav>
         <div class="wrap">
-          <h1>London, UK</h1>
+          <h1>London</h1>
+          <h3>, United Kingdom</h3>
           <ul>
             <li>Friday, 12th</li>
             <li>Sunny</li>
@@ -80,14 +79,16 @@
               </ul>
             </div>
           </div>
-
-          <small>
-            <a href="https://github.com/rimanai/Weather-s-fine" target="_blank">
-              Code</a
-            >, blood and sweat – miss Yana Pukhalska</small
-          >
+        </div>
+        <div class="wrap-two">
+          <h2>Forecast Will Go In Here...</h2>
         </div>
       </div>
+      <footer>
+        <a href="https://github.com/rimanai/Weather-s-fine" target="_blank">
+          Code</a
+        >, blood and sweat – miss Yana Pukhalska
+      </footer>
     </div>
     <script src="src/index.js"></script>
   </body>
