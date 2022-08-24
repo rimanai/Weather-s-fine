@@ -145,5 +145,15 @@ footer {
   position: absolute;
   clip-path: inset(35% 0% 0% 0%);
   right: 158px;
-  top: -51px;
+  top: -53px;
+}
+
+#icon3 {
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  position: absolute;
+  clip-path: inset(0% 0% 35% 0%);
+  right: 387px;
+  top: 446px;
 }
