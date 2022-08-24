@@ -22,6 +22,10 @@ h1 {
   display: inline;
 }
 
+strong {
+  font-weight: 400;
+}
+
 h3 {
   display: inline;
   color: #02412c;
@@ -98,6 +102,10 @@ footer {
   color: #02412c;
 }
 
+.temp-logo {
+  position: absolute;
+}
+
 .hint {
   visibility: hidden;
   width: 170px;
@@ -123,8 +131,19 @@ footer {
 
 #icon {
   width: 304px;
-  margin-left: 0;
-  margin-right: 30px;
+  margin: 0 auto;
   margin-bottom: 0;
-  position: sticky;
+  position: relative;
+  right: 91px;
+  top: -79px;
+}
+
+#icon2 {
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  position: absolute;
+  clip-path: inset(35% 0% 0% 0%);
+  right: 158px;
+  top: -51px;
 }
