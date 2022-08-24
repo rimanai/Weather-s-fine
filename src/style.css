@@ -129,6 +129,10 @@ footer {
 #form {
 }
 
+.form:hover {
+  background-color: #febc0e;
+}
+
 #icon {
   width: 304px;
   margin: 0 auto;
