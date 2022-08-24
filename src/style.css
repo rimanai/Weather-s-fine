@@ -39,7 +39,10 @@ ul {
 
 div.wrap {
   background-color: #f4cee3;
-  padding: 72px 139px;
+  padding-top: 72px;
+  padding-left: 139px;
+  padding-right: 139px;
+  padding-bottom: 0;
 }
 
 div.wrap-two {
@@ -83,5 +86,45 @@ footer {
   color: #02412c;
 }
 
+.temp-block {
+  font-size: 5rem;
+  color: #02412c;
+}
+
+.temp-button {
+  border-color: transparent;
+  background-color: transparent;
+  padding: 0;
+  color: #02412c;
+}
+
+.hint {
+  visibility: hidden;
+  width: 170px;
+  background-color: #febc0e;
+  color: #faf7eb;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 7px;
+  position: absolute;
+  z-index: 1;
+  top: 056%;
+  right: 56%;
+  font-size: 20px;
+  transition: all 110ms ease-in-out;
+}
+
+.temp-button:hover .hint {
+  visibility: visible;
+}
+
 #form {
+}
+
+#icon {
+  width: 304px;
+  margin-left: 0;
+  margin-right: 30px;
+  margin-bottom: 0;
+  position: sticky;
 }

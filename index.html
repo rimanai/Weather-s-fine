@@ -66,10 +66,17 @@
 
           <div class="row">
             <div class="col-6">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              />
-              19° C | F
+              <div class="temp-block d-flex">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  id="icon"
+                />
+                <strong>9°</strong>
+                <button class="temp-button d-flex">
+                  C
+                  <span class="hint d-flex"> Press me to change C to F </span>
+                </button>
+              </div>
             </div>
             <div class="col-6">
               <ul>
