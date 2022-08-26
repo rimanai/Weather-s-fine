@@ -61,6 +61,7 @@ div.wrap-two {
 
 .form {
   background-color: #f4cee3;
+  border-color: #f4cee3;
 }
 
 input.form-control {
@@ -75,7 +76,7 @@ div.container {
 footer {
   text-align: center;
   padding-top: 20px;
-  font-family: monospace;
+
   font-size: 11px;
 }
 
@@ -83,7 +84,9 @@ footer {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
-  background-color: #faf7eb;
+  background-color: #00ced1;
+
+  box-shadow: 0 0 50px #00ced1;
 }
 
 .bar-text {
@@ -131,6 +134,7 @@ footer {
 
 .form:hover {
   background-color: #febc0e;
+  border-color: #febc0e;
 }
 
 #icon {
