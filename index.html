@@ -62,11 +62,11 @@
           </div>
         </nav>
         <div class="wrap">
-          <h1>London</h1>
-          <h3>, United Kingdom</h3>
+          <h1 id="city">London</h1>
+          <h3 id="country">, United Kingdom</h3>
           <ul>
             <li>Friday, 12th</li>
-            <li>Sunny</li>
+            <li id="sunny">Sunny</li>
           </ul>
 
           <div class="row">
@@ -77,7 +77,7 @@
                   id="icon"
                 />
                 <span class="temp-logo d-flex">
-                  <strong>9°</strong>
+                  <strong id="temp">9</strong>
                   <button class="temp-button d-flex">
                     C
                     <span class="hint d-flex"> Press me to change C to F </span>
@@ -87,9 +87,8 @@
             </div>
             <div class="col-6">
               <ul>
-                <li>Precipitation······20%</li>
-                <li>Wind·····14 km/h</li>
-                <li>Humidity··········46%</li>
+                <li>Wind·····<span id="wind">14 km/h</span></li>
+                <li>Humidity··········<span id="humid">46%</span></li>
               </ul>
               <img
                 src="https://img.icons8.com/fluency/344/sun.png"
