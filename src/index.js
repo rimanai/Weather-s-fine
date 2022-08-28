@@ -27,7 +27,6 @@ function formatDate(datecode) {
 }
 
 function goNow(response) {
-  console.log(response.data);
   let innertempy = document.querySelector("#temp");
   innertempy.innerHTML = `${Math.round(response.data.main.temp)}°`;
   let innercity = document.querySelector("#city");
@@ -38,11 +37,25 @@ function goNow(response) {
   innersunny.innerHTML = response.data.weather[0].description;
   let innerwind = document.querySelector("#wind");
   innerwind.innerHTML = `${response.data.wind.speed} km/h`;
-  console.log(response.data.wind.speed);
   let innnerhumid = document.querySelector("#humid");
   innnerhumid.innerHTML = `${response.data.main.humidity}%`;
   let innerdate = document.querySelector("#date");
   innerdate.innerHTML = formatDate(response.data.dt * 1000);
+  let innericon = document.querySelector("#icon");
+  innericon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@4x.png`
+  );
+  let innericon2 = document.querySelector("#icon2");
+  innericon2.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@4x.png`
+  );
+  let innericon3 = document.querySelector("#icon3");
+  innericon3.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@4x.png`
+  );
 }
 
 axios.get(url).then(goNow);
