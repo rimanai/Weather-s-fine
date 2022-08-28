@@ -1,6 +1,6 @@
 let key = "1636fb578947f1db83721ae094837fc3";
-let lat = -37;
-let lon = 144;
+let lat = -37.9358705;
+let lon = 145.0175833;
 let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
 
 function formatDate(datecode) {

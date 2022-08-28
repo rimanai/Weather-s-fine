@@ -18,8 +18,10 @@ h1 {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 7rem;
   display: inline;
+  padding-bottom: 30px;
+  padding-top: 20px;
 }
 
 strong {
@@ -94,7 +96,7 @@ footer {
 }
 
 .temp-block {
-  font-size: 5rem;
+  font-size: 6rem;
   color: #02412c;
 }
 
@@ -163,5 +165,5 @@ footer {
   position: absolute;
   clip-path: inset(0% 0% 35% 0%);
   right: 433px;
-  top: 378px;
+  top: 376px;
 }
