@@ -45,7 +45,7 @@ ul {
 
 div.wrap {
   background-color: #f4cee3;
-  padding-top: 72px;
+  padding-top: 142px;
   padding-left: 139px;
   padding-right: 139px;
   padding-bottom: 0;
@@ -164,6 +164,6 @@ footer {
   margin-bottom: 0;
   position: absolute;
   clip-path: inset(0% 0% 35% 0%);
-  right: 433px;
-  top: 396px;
+  right: 367px;
+  top: 466px;
 }
