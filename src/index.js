@@ -1,3 +1,5 @@
+let ctemp = null;
+
 function getWeather(lat, lon) {
   let key = "1636fb578947f1db83721ae094837fc3";
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
@@ -28,7 +30,8 @@ function getWeather(lat, lon) {
 
   function goNow(response) {
     let innertempy = document.querySelector("#temp");
-    innertempy.innerHTML = `${Math.round(response.data.main.temp)}°`;
+    ctemp = response.data.main.temp;
+    innertempy.innerHTML = `${Math.round(ctemp)}°`;
     let innercity = document.querySelector("#city");
     innercity.innerHTML = response.data.name;
     let innercountry = document.querySelector("#country");
@@ -81,3 +84,22 @@ function getGEO(name) {
 
 let form = document.querySelector("#form");
 form.addEventListener("submit", handleSearch);
+
+function handleClick(event) {
+  event.preventDefault();
+
+  if (logo.innerHTML === "C") {
+    logo.innerHTML = `F`;
+    let innerctemp = document.querySelector("#temp");
+    let fullftemp = (ctemp * 9) / 5 + 32;
+    let ftemp = Math.round(fullftemp);
+    innerctemp.innerHTML = `${ftemp}°`;
+  } else {
+    logo.innerHTML = "C";
+    let innerctemp = document.querySelector("#temp");
+    innerctemp.innerHTML = `${Math.round(ctemp)}°`;
+  }
+}
+
+let logo = document.querySelector("#cbutton");
+logo.addEventListener("click", handleClick);
