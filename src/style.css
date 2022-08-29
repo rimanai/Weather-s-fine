@@ -61,7 +61,7 @@ div.wrap {
 div.wrap-two {
   background-color: #febc0e;
   padding: 72px 139px;
-  box-shadow: 0 0 60px #febc0e;
+  box-shadow: 0 0 70px #febc0e;
 }
 
 .app {
@@ -88,6 +88,7 @@ footer {
   padding-top: 20px;
 
   font-size: 11px;
+  background-color: #fdd05f;
 }
 
 #bar {
