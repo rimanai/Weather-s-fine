@@ -24,6 +24,12 @@ h1 {
   padding-top: 20px;
 }
 
+h2 {
+  font-size: 5rem;
+  color: #02412c;
+  padding-bottom: 25px;
+}
+
 strong {
   font-weight: 400;
 }
@@ -31,6 +37,7 @@ strong {
 h3 {
   display: inline;
   color: #02412c;
+  font-size: 40px;
 }
 
 li,
@@ -54,6 +61,7 @@ div.wrap {
 div.wrap-two {
   background-color: #febc0e;
   padding: 72px 139px;
+  box-shadow: 0 0 60px #febc0e;
 }
 
 .app {
@@ -131,12 +139,29 @@ footer {
   visibility: visible;
 }
 
+.forecast {
+  text-align: justify;
+}
+
+.fore-max {
+  color: antiquewhite;
+  font-size: 37px;
+}
+
+.fore-min {
+  color: #011b12;
+  font-size: 37px;
+}
+
 #form {
 }
 
 .form:hover {
   background-color: #febc0e;
   border-color: #febc0e;
+}
+
+.fore-day {
 }
 
 #icon {
