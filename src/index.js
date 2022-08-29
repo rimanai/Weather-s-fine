@@ -39,9 +39,9 @@ function getWeather(lat, lon) {
     let innersunny = document.querySelector("#sunny");
     innersunny.innerHTML = response.data.weather[0].description;
     let innerwind = document.querySelector("#wind");
-    innerwind.innerHTML = `${response.data.wind.speed} km/h`;
+    innerwind.innerHTML = `Wind·····${response.data.wind.speed} km/h`;
     let innnerhumid = document.querySelector("#humid");
-    innnerhumid.innerHTML = `${response.data.main.humidity}%`;
+    innnerhumid.innerHTML = `Humidity··········${response.data.main.humidity}%`;
     let innerdate = document.querySelector("#date");
     innerdate.innerHTML = formatDate(response.data.dt * 1000);
     let innericon = document.querySelector("#icon");
@@ -56,6 +56,17 @@ function getWeather(lat, lon) {
     );
     let innericon3 = document.querySelector("#icon3");
     innericon3.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@4x.png`
+    );
+
+    let innericon4 = document.querySelector("#icon4");
+    innericon4.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@4x.png`
+    );
+    let innericon5 = document.querySelector("#icon5");
+    innericon5.setAttribute(
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@4x.png`
     );

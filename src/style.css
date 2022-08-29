@@ -162,8 +162,32 @@ footer {
   width: 300px;
   margin: 0 auto;
   margin-bottom: 0;
-  position: absolute;
+  position: relative;
   clip-path: inset(0% 0% 35% 0%);
-  right: 367px;
-  top: 466px;
+  right: -56px;
+  bottom: -122px;
+}
+
+#icon4 {
+  width: 169px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  position: relative;
+  clip-path: inset(0% 0% 0% 0%);
+  right: -228px;
+  bottom: 305px;
+}
+
+#icon5 {
+  width: 324px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  position: relative;
+  clip-path: inset(0% 0% 0% 0%);
+  right: 462px;
+  bottom: -70px;
+}
+
+#cbutton {
+  color: #febc0e;
 }
