@@ -82,7 +82,7 @@ function handleSearch(event) {
 
 function getGEO(name) {
   let key = "1636fb578947f1db83721ae094837fc3";
-  let geourl = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=1&appid=${key}`;
+  let geourl = `https://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=1&appid=${key}`;
   axios.get(geourl).then(findLatLon);
 
   function findLatLon(response) {
