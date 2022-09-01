@@ -70,6 +70,8 @@ function getWeather(lat, lon) {
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@4x.png`
     );
+
+    showForecast();
   }
 }
 
@@ -114,3 +116,25 @@ function handleClick(event) {
 
 let logo = document.querySelector("#cbutton");
 logo.addEventListener("click", handleClick);
+
+function showForecast() {
+  let forecastselector = document.querySelector("#forecast");
+
+  let forecasthtml = `<div class="row forecast">`;
+
+  let weekdays = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  weekdays.forEach(function (day) {
+    forecasthtml =
+      forecasthtml +
+      ` <div class="col-3"><h3 class="fore-day">${day}</h3>
+        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png">
+         <br />
+        <span class="fore-max">12°</span> / <span class="fore-min">7°</span> C
+      </div>`;
+  });
+
+  forecasthtml = forecasthtml + `</div>`;
+
+  forecastselector.innerHTML = forecasthtml;
+}
