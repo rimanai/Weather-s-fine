@@ -94,7 +94,7 @@ function getGEO(name) {
   function findLatLon(response) {
     let lat = response.data[0].lat;
     let lon = response.data[0].lon;
-    console.log(`${lat}, ${lon}`);
+
     getWeather(lat, lon);
     go5days(lat, lon);
   }
@@ -131,6 +131,8 @@ function formatDt(dtcode) {
 
 function showForecast(response) {
   let forecast = response.data.daily;
+  let sendlat = response.data.lat;
+  let sendlon = response.data.lon;
   let forecastselector = document.querySelector("#forecast");
 
   let forecasthtml = `<div class="row forecast">`;
@@ -159,4 +161,6 @@ function showForecast(response) {
   forecasthtml = forecasthtml + `</div>`;
 
   forecastselector.innerHTML = forecasthtml;
+
+  return sendlat, sendlon;
 }
