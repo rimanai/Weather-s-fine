@@ -70,8 +70,6 @@ function getWeather(lat, lon) {
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@4x.png`
     );
-
-    showForecast();
   }
 }
 
@@ -80,6 +78,12 @@ function handleSearch(event) {
   let cityinput = document.querySelector("#city-box");
   let city = cityinput.value;
   getGEO(city);
+}
+
+function go5days(lat, lon) {
+  let key = "1636fb578947f1db83721ae094837fc3";
+  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${key}&units=metric`;
+  axios.get(url).then(showForecast);
 }
 
 function getGEO(name) {
@@ -92,6 +96,7 @@ function getGEO(name) {
     let lon = response.data[0].lon;
     console.log(`${lat}, ${lon}`);
     getWeather(lat, lon);
+    go5days(lat, lon);
   }
 }
 
@@ -117,21 +122,38 @@ function handleClick(event) {
 let logo = document.querySelector("#cbutton");
 logo.addEventListener("click", handleClick);
 
-function showForecast() {
+function formatDt(dtcode) {
+  let date = new Date(dtcode * 1000);
+  let day = date.getDate();
+  let daysarray = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  return daysarray[day];
+}
+
+function showForecast(response) {
+  let forecast = response.data.daily;
   let forecastselector = document.querySelector("#forecast");
 
   let forecasthtml = `<div class="row forecast">`;
 
-  let weekdays = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-
-  weekdays.forEach(function (day) {
-    forecasthtml =
-      forecasthtml +
-      ` <div class="col-3"><h3 class="fore-day">${day}</h3>
-        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png">
+  forecast.forEach(function (dayforecast, index) {
+    if (index < 4) {
+      forecasthtml =
+        forecasthtml +
+        ` <div class="col-3"><h3 class="fore-day">${formatDt(
+          dayforecast.dt
+        )}</h3>
+        <br />
+        <img src="https://openweathermap.org/img/wn/${
+          dayforecast.weather[0].icon
+        }@2x.png">
          <br />
-        <span class="fore-max">12°</span> / <span class="fore-min">7°</span> C
+        <span class="fore-max">${Math.round(
+          dayforecast.temp.max
+        )}°</span> / <span class="fore-min">${Math.round(
+          dayforecast.temp.min
+        )}°</span> C
       </div>`;
+    }
   });
 
   forecasthtml = forecasthtml + `</div>`;
