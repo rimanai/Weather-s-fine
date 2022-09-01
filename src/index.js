@@ -82,7 +82,8 @@ function handleSearch(event) {
 
 function go5days(lat, lon) {
   let key = "1636fb578947f1db83721ae094837fc3";
-  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${key}&units=metric`;
+  let units = "metric";
+  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${key}&units=${units}`;
   axios.get(url).then(showForecast);
 }
 
