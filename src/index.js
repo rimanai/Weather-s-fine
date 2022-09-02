@@ -78,6 +78,8 @@ function handleSearch(event) {
   let cityinput = document.querySelector("#city-box");
   let city = cityinput.value;
   getGEO(city);
+  let button = document.querySelector("#cbutton");
+  button.innerHTML = "C";
 }
 
 function go5days(lat, lon) {
