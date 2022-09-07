@@ -127,19 +127,8 @@ logo.addEventListener("click", handleClick);
 
 function formatDt(dtcode) {
   let date = new Date(dtcode * 1000);
-  let day = date.getDate();
-  let daysarray = [
-    "Thu",
-    "Fri",
-    "Sat",
-    "Sun",
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri",
-    "Sat",
-  ];
+  let day = date.getDay();
+  let daysarray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return daysarray[day];
 }
 
